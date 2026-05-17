@@ -1,34 +1,32 @@
-# Prime Simulator
+**Prime Simulator**
+Доступен live по адресу: [https://primesimulator.web.app/](https://primesimulator.web.app/)
 
-Available live at: https://primesimulator.web.app/
-
-
-Prime Simulator is a Twitch chat moderation simulator built with React, TypeScript, and Vite. The app connects to a Twitch channel, mixes live chat with replay logs, and turns moderation decisions into a viewer-growth game.
+Prime Simulator — это Twitch chat moderation simulator, созданный на React, TypeScript и Vite. Приложение подключается к Twitch-каналу, смешивает live chat с replay logs и превращает moderation decisions в игру про рост аудитории.
 
 ## Features
 
-- Twitch-style chat UI with replay log playback.
-- Optional real Twitch moderation through OAuth.
-- Rule-based ban scoring and daily progression.
-- Whitelist protection for chat and bot moderation targets.
-- Third-party emote loading and inline link previews.
-- Firebase Hosting configuration.
+* Twitch-style chat UI с воспроизведением replay log.
+* Опциональная настоящая Twitch moderation через OAuth.
+* Rule-based ban scoring и daily progression.
+* Whitelist protection для chat и bot moderation targets.
+* Загрузка third-party emotes и inline link previews.
+* Конфигурация Firebase Hosting.
 
 ## Getting Started
 
-Install dependencies:
+Установить dependencies:
 
 ```bash
 npm install
 ```
 
-Run the local dev server:
+Запустить local dev server:
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+Собрать production build:
 
 ```bash
 npm run build
@@ -36,21 +34,31 @@ npm run build
 
 ## Twitch OAuth
 
-Real Twitch moderation is optional. To enable it, create a `.env.local` file and set:
+Настоящая Twitch moderation опциональна. Чтобы включить её, создай файл `.env.local` и укажи:
 
-```bash
+```env
 VITE_TWITCH_CLIENT_ID=your_twitch_client_id
 ```
 
-The app requests `chat:read`, `chat:edit`, and `moderator:manage:banned_users` scopes.
+Приложение запрашивает scopes: `chat:read`, `chat:edit` и `moderator:manage:banned_users`.
 
 ## Replay Logs
 
-Replay messages are loaded from `public/replay-logs/active-log.txt`. The active replay channel marker is configured in `src/config/replayConfig.ts`.
+Replay messages загружаются из:
+
+```text
+public/replay-logs/active-log.txt
+```
+
+Маркер активного replay channel настраивается в:
+
+```text
+src/config/replayConfig.ts
+```
 
 ## Deployment
 
-The project includes `firebase.json` for Firebase Hosting. The configured predeploy step runs:
+Проект включает `firebase.json` для Firebase Hosting. Настроенный predeploy step запускает:
 
 ```bash
 npm run build
