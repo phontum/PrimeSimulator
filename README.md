@@ -1,20 +1,19 @@
 # Prime Simulator
 Доступен live по адресу: [https://primesimulator.web.app/](https://primesimulator.web.app/)
 
-Prime Simulator — это Twitch chat moderation simulator, созданный на React, TypeScript и Vite. Приложение подключается к Twitch-каналу, смешивает live chat с replay logs и превращает moderation decisions в игру про рост аудитории.
+Prime Simulator — это симулятор модерации Twitch чата, созданный на React, TypeScript и Vite. Приложение подключается к Twitch-каналу, смешивает активный чат игрока с логами прошедшего чата и превращает решения модерации в игру про рост аудитории.
 
-## Features
+## Фишки
 
-* Twitch-style chat UI с воспроизведением replay log.
-* Опциональная настоящая Twitch moderation через OAuth.
-* Rule-based ban scoring и daily progression.
-* Whitelist protection для chat и bot moderation targets.
+* Интерфейс в стиле Twitch с воспроизведением логов существовавшего (Smokerge) чата.
+* Опциональная настоящая Twitch модерация через OAuth.
+* Очки и прогрессия.
 * Загрузка third-party emotes и inline link previews.
 * Конфигурация Firebase Hosting.
 
 ## Getting Started
 
-Установить dependencies:
+Установить зависимости:
 
 ```bash
 npm install
@@ -26,7 +25,7 @@ npm install
 npm run dev
 ```
 
-Собрать production build:
+Собрать production билд:
 
 ```bash
 npm run build
@@ -34,23 +33,23 @@ npm run build
 
 ## Twitch OAuth
 
-Настоящая Twitch moderation опциональна. Чтобы включить её, создай файл `.env.local` и укажи:
+Настоящая Twitch модерация опциональна. Чтобы включить её, создай файл `.env.local` и укажи:
 
 ```env
 VITE_TWITCH_CLIENT_ID=your_twitch_client_id
 ```
 
-Приложение запрашивает scopes: `chat:read`, `chat:edit` и `moderator:manage:banned_users`.
+Приложение запрашивает следующие разрешения: `chat:read`, `chat:edit` и `moderator:manage:banned_users`.
 
 ## Replay Logs
 
-Replay messages загружаются из:
+Сообщения из логов загружаются из:
 
 ```text
 public/replay-logs/active-log.txt
 ```
 
-Маркер активного replay channel настраивается в:
+Маркер активного чата канала настраивается в:
 
 ```text
 src/config/replayConfig.ts
