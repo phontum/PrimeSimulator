@@ -1,0 +1,56 @@
+export const raidChannelNames = [
+  "forsen",
+  "xqc",
+  "summit1g",
+  "lirik",
+  "shroud",
+  "ninja",
+  "sodapoppin",
+  "cohhcarnage",
+  "melharucos",
+  "serega_pirat",
+  "sasavot",
+  "Praden",
+  "Evgexa",
+  "HoneyMad",
+  "Dunduk",
+  "segall",
+  "lasqa",
+  "F1ashko",
+  "guilticus",
+  "timofey",
+  "RoadHouse",
+  "Liz0N",
+  "DeadP_47",
+  "Arrowwoods"
+];
+
+export const followNamePool = [
+  "AHAH_Prime",
+  "79797979797979797979",
+  "mel",
+  "UZY_PRIME",
+  "UZYA_PRIME",
+  "UZYA",
+  "cuhi",
+  "1984",
+  "MelhaNogus_Prime",
+  "cyhi",
+  "AXAXAXAXAXAXAXAXAXA",
+  "Joe_Peach",
+  "Joe_Peach_Prime",
+  "Joe_Prime",
+  "PRIME",
+  "ester_69",
+  "optimus_prime",
+  "rudolf6410"
+];
+
+export const activityFeedConfig = {
+  maxEvents: 32,
+  minEventDelayMs: 6500,
+  maxEventDelayMs: 18000,
+  raidChance: 0.18,
+  minRaidViewers: 1,
+  maxRaidViewers: 3000,
+};

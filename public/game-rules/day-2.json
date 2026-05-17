@@ -1,0 +1,29 @@
+{
+  "day": 2,
+  "title": " ",
+  "targetViewers": 2500,
+  "baseDailyLimit": 1000,
+  "correctBanReward": 50,
+  "wrongBanPenalty": 80,
+  "config": {
+    "forbiddenUsernameMention": "mel",
+    "forbiddenEmotePrefixes": ["mel"],
+    "forbiddenNames": ["melharucos", "serega_pirat", "sasavot", "Praden", "Evgexa", "HoneyMad", "Dunduk", "segall", "lasqa", "F1ashko", "guilticus", "timofey", "RoadHouse", "Liz0N", "DeadP_47", "Arrowwoods", "jeka_odessit", "petrox420", "Audio__RW"],
+    "forbiddenWords": ["прайм", "дианочка", "Мэд база", "мэдисон", "мэддисон", "меддисон", "мед", "мел", "mel", "meI", "HoneyMad", "сегал", "хуишкин", "верхний интернет"],
+    "positiveEmotes": ["PagMan", "POGGERS", "PogChamp", "EZ"]
+  },
+  "rules": [
+    { "id": "mention-forbidden-user", "title": "Без упоминания пользователя", "description": "Запрещено упоминание следующих пользователей: melharucos, HoneyMad, segall, lasqa, Arrowwoods, jeka_odessit, petrox420, Audio__RW", "enabled": true },
+    { "id": "ascii-art", "title": "Без ASCII-арта", "description": "Запрещены ASCII-арты.", "enabled": true },
+    { "id": "repeated-pasta", "title": "Без повторяющихся паст", "description": "Запрещены сообщения, повторяющиеся больше 2 раз.", "enabled": true },
+    { "id": "caps-lock", "title": "Без CAPS LOCK", "description": "Запрещен CAPS LOCK.", "enabled": true },
+    { "id": "forbidden-emote-prefix", "title": "Без смайлов mel", "description": "Запрещены смайлы с канала melharucos.", "enabled": true },
+    { "id": "content-dissatisfaction", "title": "Без жалоб на контент", "description": "Запрещено недовольство контентом на стриме.", "enabled": true },
+    { "id": "short-streamer-tag", "title": "Без коротких тегов", "description": "Запрещены сообщения с тегом стримера короче 1 строки.", "enabled": true },
+    { "id": "sad-tag-format", "title": "Без грустного тега", "description": "Запрещены сообщения формата @user + грустный смайлик.", "enabled": true },
+    { "id": "twitch-names", "title": "Без имён Twitch", "description": "Запрещены сообщения от неймов Twitch.", "enabled": true },
+    { "id": "forbidden-words", "title": "Запрещённые слова", "description": "Запрещены конкретные слова.", "enabled": true },
+    { "id": "laughter", "title": "Без смеха", "description": "Запрещен смех.", "enabled": true },
+    { "id": "post-ban-complaint", "title": "Без жалоб после бана", "description": "Запрещены пост-банные сообщения-негодования.", "enabled": true }
+  ]
+}

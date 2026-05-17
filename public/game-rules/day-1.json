@@ -1,0 +1,23 @@
+{
+  "day": 1,
+  "title": " ",
+  "targetViewers": 1000,
+  "baseDailyLimit": 500,
+  "correctBanReward": 12,
+  "wrongBanPenalty": 8,
+  "config": {
+    "forbiddenUsernameMention": "melharucos",
+    "forbiddenEmotePrefixes": ["mel"],
+    "forbiddenNames": ["melharucos"],
+    "forbiddenWords": ["мэл", "мел", "мэлха", "мелахурукос", "мелахурукоз", "мелхорукос", "мэльчик", "мельчик", "мэээээл", "мээл"],
+    "positiveEmotes": ["PagMan", "POGGERS", "PogChamp", "EZ"]
+  },
+  "rules": [
+    {
+      "id": "...",
+      "title": "...",
+      "description": "Тебе начинает казаться, что чат что-то задумал. Не дай им испортить твою карьеру.",
+      "enabled": true
+    }
+  ]
+}
