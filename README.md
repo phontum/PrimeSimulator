@@ -1,6 +1,8 @@
 # Prime Simulator
 
 Available live at: https://primesimulator.web.app/
+
+
 Prime Simulator is a Twitch chat moderation simulator built with React, TypeScript, and Vite. The app connects to a Twitch channel, mixes live chat with replay logs, and turns moderation decisions into a viewer-growth game.
 
 ## Features
