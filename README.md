@@ -1,4 +1,4 @@
-**Prime Simulator**
+#Prime Simulator
 Доступен live по адресу: [https://primesimulator.web.app/](https://primesimulator.web.app/)
 
 Prime Simulator — это Twitch chat moderation simulator, созданный на React, TypeScript и Vite. Приложение подключается к Twitch-каналу, смешивает live chat с replay logs и превращает moderation decisions в игру про рост аудитории.
