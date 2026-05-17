@@ -62,3 +62,6 @@ src/config/replayConfig.ts
 ```bash
 npm run build
 ```
+
+
+## Спасибо @nouck за дизайн документ для игры!
