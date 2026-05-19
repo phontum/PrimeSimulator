@@ -315,7 +315,7 @@ function dailyProgressPenalty(day: number, dailyEarned: number): number {
 }
 
 function resolvePenalty(evaluation: BanEvaluation, day: number, dailyEarned: number): number {
-  if (day <= 1 && evaluation.matchedRuleIds.includes("escaped-message")) {
+  if (evaluation.matchedRuleIds.includes("escaped-message")) {
     return 1;
   }
 
