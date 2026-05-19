@@ -176,10 +176,10 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
     }
   }, [channel, realTwitchModeration, twitchSession]);
 
-  const evaluateBannedMessageOnce = useCallback((message: ChatMessage) => {
+  const evaluateBannedMessageOnce = useCallback((message: ChatMessage, dedupeByUser = true) => {
     if (ruleSet) {
       const preview = evaluateBan(message, ruleSet);
-      if (preview.correct) {
+      if (preview.correct && dedupeByUser) {
         const normalized = normalizeUsername(message.username);
         if (rewardedRuleUsersRef.current.has(normalized)) {
           return null;
@@ -268,7 +268,7 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
       return next;
     });
 
-    const evaluation = evaluateBannedMessageOnce(message);
+    const evaluation = evaluateBannedMessageOnce(message, false);
     playBanSound(banSoundVolume, evaluation?.correct ?? false);
     if (evaluation) {
       addFloatingScoreEvent(evaluation.viewerDelta, evaluation.correct, pointerPositionRef.current, setFloatingScoreEvents);

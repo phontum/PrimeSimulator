@@ -124,7 +124,7 @@ export function GameplayProvider({ children }: { children: ReactNode }): JSX.Ele
       ? Math.max(1, Math.round(evaluation.viewerDelta * 0.5))
       : evaluation.viewerDelta;
     const dynamicPenalty = evaluation.source === "wrong-ban" || evaluation.source === "missed-rule"
-      ? -dailyProgressPenalty(day, dailyEarned)
+      ? -resolvePenalty(evaluation, day, dailyEarned)
       : comboAdjustedDelta;
     const randomizedDelta = dynamicPenalty > 0 ? randomizeReward(dynamicPenalty) : dynamicPenalty;
     const cappedDelta = randomizedDelta > 0
@@ -312,4 +312,12 @@ function dailyProgressPenalty(day: number, dailyEarned: number): number {
     return Math.round(Math.max(0, dailyEarned) * 0.05) + randomInt(5, 10);
   }
   return Math.round(Math.max(0, dailyEarned) * 0.1) + randomInt(10, 50);
+}
+
+function resolvePenalty(evaluation: BanEvaluation, day: number, dailyEarned: number): number {
+  if (day <= 1 && evaluation.matchedRuleIds.includes("escaped-message")) {
+    return 1;
+  }
+
+  return dailyProgressPenalty(day, dailyEarned);
 }
